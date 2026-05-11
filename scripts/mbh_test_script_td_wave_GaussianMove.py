@@ -266,8 +266,6 @@ if __name__ == "__main__":
     periodic_container = PeriodicContainer({"mbh": {"phi_ref": 2 * np.pi, "psi": np.pi, "lam": 2 * np.pi}}, key_order={"mbh": sampled_basis})
     fp = f"test_mbh_pe.h5"
     if os.path.exists(fp):
-        os.remove(fp)
-    if os.path.exists(fp):
         file_backend = HDFBackend(fp)
         start_state = file_backend.get_last_sample()
     else:
